@@ -1,0 +1,55 @@
+{
+    "flashes":[
+        {
+            "name":"mram",
+            "sections": [
+                {
+                    "name": "ssbl",
+                    "template": "rom",
+                    "properties": {
+                        "binary": null,
+                        "boot" :" true",
+                        "subtype" : "ssbl"
+                    }
+                },
+                {
+                    "name": "meta_table",
+                    "template": "meta table",
+                    "properties": {
+                        "ssbl_a": "ssbl",
+                        "pt_a": "partition table"
+                    }
+                },
+                {
+                    "name": "partition table",
+                    "template": "partition table v2",
+                    "properties": {
+                        "size": 1024
+                    }
+                },
+                {
+                    "name": "volume table",
+                    "template": "volume table"
+                },
+                {
+                    "name": "app",
+                    "template": "app binary",
+                    "properties": {
+                        "binary": null
+                    }
+                },
+                {
+                    "name": "readfs_app",
+                    "template": "readfs",
+                    "properties": {
+                        "files": []
+                    }
+                }
+            ]
+        },
+        {
+            "name":"flash",
+            "sections": []
+        }
+    ]
+}
